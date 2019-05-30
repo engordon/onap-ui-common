@@ -1,15 +1,8 @@
 
 
 @mixin color-icon($primary-color) {
-    
         color: $primary-color;
         fill: $primary-color;
-
-    svg.stroke {
-        stroke: $primary-color;
-        fill: transparent;
-    }
-
 }
 
 @mixin color-icon-hover($secondary-color) {
@@ -46,6 +39,11 @@
     & > svg {
         width: 100%;
         height: 100%;
+        
+        &.stroke {
+            stroke: $primary-color;
+            fill: transparent;
+        }
     }
 
     &[disabled] {
